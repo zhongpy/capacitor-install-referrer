@@ -10,7 +10,7 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "InstallReferrer")
+@CapacitorPlugin(name = "CapacitorInstallReferrer")
 public class CapacitorInstallReferrerPlugin extends Plugin {
     private int referrerRetryCount = 0;
     private static final int MAX_RETRY = 2;
