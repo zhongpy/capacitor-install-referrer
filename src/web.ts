@@ -3,8 +3,15 @@ import { WebPlugin } from '@capacitor/core';
 import type { CapacitorInstallReferrerPlugin } from './definitions';
 
 export class CapacitorInstallReferrerWeb extends WebPlugin implements CapacitorInstallReferrerPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async getReferrer(): Promise<{
+    installReferrer: string;
+    referrerClickTimestamp: number;
+    installBeginTimestamp: number;
+    googlePlayInstant: boolean;
+  }> {
+    return {installReferrer: "",
+    referrerClickTimestamp: 0,
+    installBeginTimestamp: 0,
+    googlePlayInstant: true};
   }
 }

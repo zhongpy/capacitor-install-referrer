@@ -11,9 +11,23 @@ npx cap sync
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`getReferrer()`](#getreferrer)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### getReferrer()
+
+```typescript
+getReferrer() => Promise<{ installReferrer: string; referrerClickTimestamp: number; installBeginTimestamp: number; googlePlayInstant: boolean; }>
+```
+
+**Returns:** <code>Promise&lt;{ installReferrer: string; referrerClickTimestamp: number; installBeginTimestamp: number; googlePlayInstant: boolean; }&gt;</code>
+
+--------------------
+
 </docgen-api>

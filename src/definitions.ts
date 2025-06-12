@@ -1,3 +1,8 @@
 export interface CapacitorInstallReferrerPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getReferrer(): Promise<{
+    installReferrer: string;
+    referrerClickTimestamp: number;
+    installBeginTimestamp: number;
+    googlePlayInstant: boolean;
+  }>;
 }

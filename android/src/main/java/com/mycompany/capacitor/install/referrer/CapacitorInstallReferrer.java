@@ -1,11 +1,13 @@
 package com.mycompany.capacitor.install.referrer;
 
-import android.util.Log;
+import android.content.Context;
+import android.os.RemoteException;
+import com.android.installreferrer.api.*;
 
 public class CapacitorInstallReferrer {
-
-    public String echo(String value) {
-        Log.i("Echo", value);
-        return value;
+    public ReferrerDetails getInstallReferrerDetails(Context context) throws RemoteException {
+        InstallReferrerClient referrerClient = InstallReferrerClient.newBuilder(context).build();
+        referrerClient.startConnection(null); // Connection handled outside
+        return referrerClient.getInstallReferrer();
     }
 }

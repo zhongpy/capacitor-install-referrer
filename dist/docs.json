@@ -1,0 +1,25 @@
+{
+  "api": {
+    "name": "CapacitorInstallReferrerPlugin",
+    "slug": "capacitorinstallreferrerplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "getReferrer",
+        "signature": "() => Promise<{ installReferrer: string; referrerClickTimestamp: number; installBeginTimestamp: number; googlePlayInstant: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ installReferrer: string; referrerClickTimestamp: number; installBeginTimestamp: number; googlePlayInstant: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "getreferrer"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
