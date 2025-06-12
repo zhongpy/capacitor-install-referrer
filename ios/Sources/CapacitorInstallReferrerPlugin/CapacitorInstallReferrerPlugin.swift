@@ -10,14 +10,16 @@ public class CapacitorInstallReferrerPlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "CapacitorInstallReferrerPlugin"
     public let jsName = "CapacitorInstallReferrer"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "getReferrer", returnType: CAPPluginReturnPromise)
     ]
     private let implementation = CapacitorInstallReferrer()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
+    @objc func getReferrer(_ call: CAPPluginCall) {
         call.resolve([
-            "value": implementation.echo(value)
+            "installReferrer": "",
+            "referrerClickTimestamp": 0,
+            "installBeginTimestamp": 0,
+            "googlePlayInstant": false
         ])
     }
 }
